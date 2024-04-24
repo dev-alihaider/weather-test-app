@@ -1,6 +1,6 @@
 class WeatherService
-    API_KEY = '569094c915caad5a03e26a2596500ad4'
-  
+    API_KEY = ENV['WEATHER_API_KEY']
+
     def initialize(latitude, longitude)
       @latitude = latitude
       @longitude = longitude
@@ -11,7 +11,6 @@ class WeatherService
       response = RestClient.get(url)
       data = JSON.parse(response.body)
       
-      # Extract relevant data (modify as needed)
       current_temp = data['main']['temp']
       high_temp = data['main']['temp_max']
       low_temp = data['main']['temp_min']
