@@ -1,24 +1,35 @@
-# README
+# Weather forecast
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+The application is a weather forecast application that retrieves current temperature and extended forecast data for a given address. 
 
-Things you may want to cover:
+## Prerequisites
+- Ruby 3.0.1
+- Rails 6.1.7 or higher (currently '>= 6.1.7.6')
 
-* Ruby version
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/dev-alihaider/weather-test-app.git
+    ```
+2. Install dependencies:
+    ```bash
+    bundle install
+    ```
+3. Set up the database:
+    ```bash
+    rails db:create
+    rails db:migrate
+    ```
 
-* System dependencies
+## Usage
+- To start the Rails server:
+    ```bash
+    rails server
+    ```
+- Open a web browser and navigate to `http://localhost:3000` to view the application.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Testing
+To run tests, use the following command:
+```bash
+rspec
